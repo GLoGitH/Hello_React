@@ -34,6 +34,7 @@ const App = () =>
   return (
     <div className="App">
       <HelloWorld name="Gert"/>
+      <p />
       <HelloWorld name="Laurence"/>
     </div>
   );
