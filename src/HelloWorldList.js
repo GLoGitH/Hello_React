@@ -11,7 +11,9 @@ class HelloWorldList extends Component
      super(props);
      this.state = { greetings: ['Gert', 'Jolien', 'Marie'] };
 
-     this.addGreeting = this.addGreeting.bind(this);  
+     this.addGreeting = this.addGreeting.bind(this);         //in order to be sure the actual situation is current, bind the function as a property of the component (this)  
+
+     this.removeGreeting = this.removeGreeting.bind(this);
     }
 
     render() 
@@ -36,15 +38,24 @@ class HelloWorldList extends Component
     {
         return (this.state.greetings
                   .map(name => 
-                         ( <HelloWorld key={name} name={name} /> )
+                         ( <HelloWorld key={name} name={name} removeGreeting={this.removeGreeting} /> )
                       )
-               );
+                                                            //pass the function down as property of each HelloWorld component
+                    );
     }
 
     addGreeting(newName) 
     {
         console.log('in HelloWorld addGreeting called from AddGreeter\'s addGreeting ['+this.state.greetings+']');
-        this.setState({ greetings: [...this.state.greetings, newName] });
+        this.setState({ greetings: [...this.state.greetings, newName] }); 
+
+        //the atual newName will only actually be present in the list when react has rerendered the components/page .... 
+    }
+
+    removeGreeting(name2remove)
+    {
+        const filteredGreetings = this.state.greetings.filter(name => { return name !== name2remove; });
+        this.setState({ greetings: filteredGreetings}); 
     }
 }
 

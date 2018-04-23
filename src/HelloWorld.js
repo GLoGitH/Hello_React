@@ -30,6 +30,8 @@ class HelloWorld extends Component
         this.state = { greeting: 'Hello' };
 
         this.goDutch = this.goDutch.bind(this);
+
+        this.removeGreetingHW = this.removeGreetingHW.bind(this);
     }
 
    goDutch()
@@ -47,10 +49,16 @@ class HelloWorld extends Component
             <font color='red'>{this.state.greeting} <i>{this.props.name}</i> !</font>
           </p>
           <button onClick={this.goDutch}>Vervlaams!</button>
+          <br />
+          <button onClick={this.removeGreetingHW}>Remove this one</button>
         </div>
       );
     }
 
+    removeGreetingHW()
+    {
+        this.props.removeGreeting(this.props.name)
+    }
 }
 
 export default HelloWorld;
