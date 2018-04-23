@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+//import React, { Component } from 'react';
+import HelloWorld from './HelloWorld';
+//import './App.css';
 
 /*
 class App extends Component 
@@ -32,11 +33,8 @@ const App = () =>
 //  return (<div className="App"><font color='red'>Hello World!</font></div>)
   return (
     <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
-      <p className="App-intro">
-        <font color='red'>Hello World!</font>
-      </p>
+      <HelloWorld />
+      <HelloWorld />
     </div>
   );
 };

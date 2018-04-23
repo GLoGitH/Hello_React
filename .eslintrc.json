@@ -18,6 +18,6 @@
         "no-unreachable": "warn",
         "constructor-super": "warn",
         "valid-typeof": "warn", 
-        "no-extra-semi":"error"
+        "no-extra-semi":"error" 
     }
 }
