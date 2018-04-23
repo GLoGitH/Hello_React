@@ -7,7 +7,7 @@ import './HelloWorld.css';
 
 
 
-const HelloWorld = () => 
+const HelloWorld = props => 
 {
 //  return (<div className="App"><font color='red'>Hello World!</font></div>)
   return (
@@ -15,7 +15,7 @@ const HelloWorld = () =>
       <img src={logo} className="App-logo" alt="logo" />
       <h1 className="App-title">Welcome to React</h1>
       <p className="App-intro">
-        <font color='red'>Hello World!</font>
+        <font color='red'>Hello <i>{props.name}</i> !</font>
       </p>
     </div>
   );

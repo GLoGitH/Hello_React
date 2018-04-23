@@ -33,8 +33,8 @@ const App = () =>
 //  return (<div className="App"><font color='red'>Hello World!</font></div>)
   return (
     <div className="App">
-      <HelloWorld />
-      <HelloWorld />
+      <HelloWorld name="Gert"/>
+      <HelloWorld name="Laurence"/>
     </div>
   );
 };
