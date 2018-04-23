@@ -1,7 +1,8 @@
 import React from 'react';
 //import React, { Component } from 'react';
-import HelloWorld from './HelloWorld';
-//import './App.css';
+//import HelloWorld from './HelloWorld';
+import HelloWorldList from './HelloWorldList';
+import './App.css';
 
 /*
 class App extends Component 
@@ -25,6 +26,18 @@ class App extends Component
   }
 }
 
+const App = () => 
+{
+//  return (<div className="App"><font color='red'>Hello World!</font></div>)
+  return (
+    <div className="App"> 
+      <HelloWorld name="Gert" />
+      <p />
+      <HelloWorld name="Laurence" />
+   </div>
+  );
+};
+
 */
 
 
@@ -32,10 +45,8 @@ const App = () =>
 {
 //  return (<div className="App"><font color='red'>Hello World!</font></div>)
   return (
-    <div className="App">
-      <HelloWorld name="Gert"/>
-      <p />
-      <HelloWorld name="Laurence"/>
+    <div className="App"> 
+      <HelloWorldList />
     </div>
   );
 };

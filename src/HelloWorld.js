@@ -28,7 +28,7 @@ class HelloWorld extends Component
    {
         super(props);
         this.state = { greeting: 'Hello' };
-        
+
         this.goDutch = this.goDutch.bind(this);
     }
 
@@ -40,7 +40,7 @@ class HelloWorld extends Component
   render() 
   {
     return  (
-        <div className="App">
+        <div className="HelloWorld">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
           <p className="App-intro">
